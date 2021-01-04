@@ -19,6 +19,10 @@ public class BaseAgreement {
      * 消息体
      */
     private String body;
+    /**
+     * 返回消息的源消息
+     */
+    private String originalId;
 
     public String getId() {
         return id;
@@ -44,12 +48,21 @@ public class BaseAgreement {
         this.body = body;
     }
 
+    public String getOriginalId() {
+        return originalId;
+    }
+
+    public void setOriginalId(String originalId) {
+        this.originalId = originalId;
+    }
+
     @Override
     public String toString() {
         return "BaseAgreement{" +
                 "id='" + id + '\'' +
                 ", type=" + type +
                 ", body='" + body + '\'' +
+                ", originalId='" + originalId + '\'' +
                 '}';
     }
 }
