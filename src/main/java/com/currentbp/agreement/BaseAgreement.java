@@ -23,6 +23,10 @@ public class BaseAgreement {
      * 返回消息的源消息
      */
     private String originalId;
+    /**
+     * 返回码
+     */
+    private String retCode;
 
     public String getId() {
         return id;
@@ -56,6 +60,14 @@ public class BaseAgreement {
         this.originalId = originalId;
     }
 
+    public String getRetCode() {
+        return retCode;
+    }
+
+    public void setRetCode(String retCode) {
+        this.retCode = retCode;
+    }
+
     @Override
     public String toString() {
         return "BaseAgreement{" +
@@ -63,6 +75,7 @@ public class BaseAgreement {
                 ", type=" + type +
                 ", body='" + body + '\'' +
                 ", originalId='" + originalId + '\'' +
+                ", retCode='" + retCode + '\'' +
                 '}';
     }
 }
